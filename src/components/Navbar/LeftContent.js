@@ -1,0 +1,24 @@
+import Logo from "./Logo"
+import "./Navbar.css"
+
+const LeftContent = () => {
+  return (
+    <div className="left-container">
+        <Logo />
+        <div className="menu-item">
+            Courses
+            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.91 0.580078L6.5 5.17008L11.09 0.580078L12.5 2.00008L6.5 8.00008L0.5 2.00008L1.91 0.580078Z" fill="black" />
+            </svg>
+        </div>
+        <div className="menu-item">
+            Programs
+            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.91 0.580078L6.5 5.17008L11.09 0.580078L12.5 2.00008L6.5 8.00008L0.5 2.00008L1.91 0.580078Z" fill="black" />
+            </svg>
+        </div>
+    </div>
+  )
+}
+
+export default LeftContent
