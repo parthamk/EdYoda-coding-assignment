@@ -1,8 +1,41 @@
+import React, { useState } from 'react';
 import "./main.css";
 import razorpayLogo from "../../assets/razorpay-icon.png";
-import greenCheck from "../../assets/green-check.png";
+// import greenCheck from "../../assets/green-check.png";
 
 const Form = () => {
+    const [selectedOption, setSelectedOption] = useState('₹12');
+    const [originalPrice, setOriginalPrice] = useState('₹18,500');
+    const [discount, setDiscount] = useState('₹18,321');
+    const [totalPrice, setTotalPrice] = useState('₹179');
+
+    const handleOptionChange = (event) => {
+        setSelectedOption(event.target.value);
+    
+        // Calculate the original price, discount, and total after discount based on the selected option
+        switch (event.target.value) {
+          case '12':
+            setOriginalPrice('₹18,500');
+            setDiscount('₹18,321');
+            setTotalPrice('₹179');
+            break;
+          case '6':
+            setOriginalPrice('₹9,250');
+            setDiscount('₹9,101');
+            setTotalPrice('₹149');
+            break;
+          case '3':
+            setOriginalPrice('₹4,625');
+            setDiscount('₹4,526');
+            setTotalPrice('₹99');
+            break;
+          default:
+            setOriginalPrice('');
+            setDiscount('');
+            setTotalPrice('');
+            break;
+        }
+      };
 
 
     return (
@@ -28,7 +61,7 @@ const Form = () => {
 
             {/* Expired plan */}
                 <div className="text-field">
-                    <input type="radio" value="Male" name="gender" className="radio-button" disabled checked/>
+                    <input type="radio" value="Male" name="gender" className="radio-button" disabled/>
                     <div className="disabled-text-dsc">
                     12 Months Subscription 
                     </div>
@@ -50,12 +83,21 @@ const Form = () => {
 
                 {/* 12 month */}
                 <div className="text-field new-offer">
-                <div className="radio-button2">
-                    <input type="radio" id="radio" name="radio" defaultChecked />
+                    <input 
+                        type="radio" 
+                        id="option1"
+                        value="12"
+                        checked={selectedOption === '12'}
+                        onChange={handleOptionChange} 
+                        name="subscriptionOption" 
+                        className="radio-button" 
+                        defaultChecked
+                        />
+{/* 
                     <label htmlFor="radio" className="radio-label">
                         <img className="radio-icon" src={greenCheck} alt="Green Check" />
-                    </label>
-                </div>
+                    </label> */}
+
                     {/* <input type="radio" value="Male" name="gender" className="radio-button new-checked" checked/> */}
                     <div className="disabled-text-dsc new-plan">
                     12 Months Subscription 
@@ -78,7 +120,14 @@ const Form = () => {
 
                 {/* 6 month */}
                 <div className="text-field normal-text-field">
-                    <input type="radio" value="Male" name="gender" className="radio-button" />
+                    <input 
+                        type="radio"
+                        id="option2" 
+                        value="6" 
+                        name="subscriptionOption"
+                        checked={selectedOption === '6'}
+                        onChange={handleOptionChange} 
+                        className="radio-button" />
                     <div className="disabled-text-dsc new-plan">
                     6 Months Subscription 
                     </div>
@@ -97,7 +146,14 @@ const Form = () => {
 
                 {/* 3 month */}
                 <div className="text-field normal-text-field">
-                    <input type="radio" value="Male" name="gender" className="radio-button" />
+                    <input 
+                        type="radio"
+                        id="option3" 
+                        value="3" 
+                        name="subscriptionOption"
+                        checked={selectedOption === '3'}
+                        onChange={handleOptionChange} 
+                        className="radio-button" />
                     <div className="disabled-text-dsc new-plan">
                     3 Months Subscription 
                     </div>
@@ -114,10 +170,11 @@ const Form = () => {
                     </div>
                 </div>
 
+                {/* Summery */}
                 <div className="summery-container">
                     <div className="text-container">
-                        <content class="subscription-fee">Subscription Fee</content>
-                        <content class="subscription-amount">₹18,500</content>
+                        <content className="subscription-fee">Subscription Fee</content>
+                        <content className="subscription-amount"> {originalPrice}</content>
                     </div>
                     <div className="offer-alert">
                         <div className="alert-header">
@@ -125,7 +182,7 @@ const Form = () => {
                                 Limited time offer
                             </div>
                             <div className="offer-content-amount">
-                                - ₹18,401
+                                - {discount}
                             </div>
                         </div>
                         <div className="alert-body">
@@ -141,9 +198,10 @@ const Form = () => {
                     </div>
                     <div className="text-container">
                         <div className="left-text">Total (Incl. of 18% GST)</div>
-                        <div className="right-text">₹149</div>
+                        <div className="right-text">{totalPrice}</div>
                     </div>
                 </div>
+
                 <div className="button-container">
                     <div className="secondary-button">
                         <div className="button-text">Cancel</div>

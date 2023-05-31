@@ -219,7 +219,7 @@
 }
 
 /* RadioButton.css */
-.radio-button2 {
+.radio-button {
   position: relative;
   width: 32px;
   height: 32px;
@@ -270,9 +270,9 @@
   background-color: #D7EDDD;
 }
 
-.radio-button.checked {
+/* .radio-button.checked {
   background-color: #FFFFFF;
-}
+} */
 
 .tick-mark {
   position: absolute;
