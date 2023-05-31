@@ -6,7 +6,7 @@
     align-items: center;
     /* padding: 24px 80px; */
     gap: 10px;
-    width: 100vw;
+    width: 100%;
     height: 72px;
     background: #FFFFFF;
     display: flex;
@@ -33,7 +33,8 @@
     padding: 0;
     gap: 64px;
     width: 364px;
-    height: 40px;
+    /* height: 40px; */
+    justify-content: space-arround;
 }
 
 .menu-item {
@@ -42,7 +43,7 @@
     align-items: center;
     padding: 0;
     gap: 12px;
-    width: 97px;
+    width: 120px;
     height: 24px;
     position: relative;
   }
@@ -62,7 +63,7 @@
     align-items: center;
     padding: 10px 39px;
     gap: 10px;
-    width: 166px;
+    width: 198px;
     height: 40px;
     background: linear-gradient(266.79deg, #0048FF 4.63%, #0096FF 100%);
     border-radius: 52px;
