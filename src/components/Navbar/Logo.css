@@ -13,4 +13,5 @@
   background: linear-gradient(#0096FF 42.14%, #0048FF 96.7%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
