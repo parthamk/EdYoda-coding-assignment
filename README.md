@@ -2,7 +2,8 @@
 
 ## Check out the live project here [Live Project CLICK HERE](https://comfy-gumdrop-202ca5.netlify.app/)
 
-![EdYoda coding assignment](https://github.com/parthamk/EdYoda-coding-assignment/assets/110169184/99a02992-6553-4695-8b63-611da36e6c13)
+
+![EdYoda coding assignment](https://github.com/parthamk/EdYoda-coding-assignment/assets/110169184/fe165186-cc7f-411d-bd0a-91ab51441e67)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
