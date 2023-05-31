@@ -1,5 +1,6 @@
 import "./main.css";
 import razorpayLogo from "../../assets/razorpay-icon.png";
+import greenCheck from "../../assets/green-check.png";
 
 const Form = () => {
 
@@ -49,7 +50,13 @@ const Form = () => {
 
                 {/* 12 month */}
                 <div className="text-field new-offer">
-                    <input type="radio" value="Male" name="gender" className="radio-button new-checked" checked/>
+                <div className="radio-button2">
+                    <input type="radio" id="radio" name="radio" defaultChecked />
+                    <label htmlFor="radio" className="radio-label">
+                        <img className="radio-icon" src={greenCheck} alt="Green Check" />
+                    </label>
+                </div>
+                    {/* <input type="radio" value="Male" name="gender" className="radio-button new-checked" checked/> */}
                     <div className="disabled-text-dsc new-plan">
                     12 Months Subscription 
                     </div>
