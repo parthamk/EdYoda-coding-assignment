@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+## Check out the live project here [Live Project CLICK HERE](https://comfy-gumdrop-202ca5.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
